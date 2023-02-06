@@ -13,13 +13,13 @@ import static utils.constants.ActorConstans.ACTOR_DEFAULT;
 public class Hook {
 
     @Before
-    public static void inicializar(){
+    public static void inicializar() {
         setTheStage(new OnlineCast());
         theActor(ACTOR_DEFAULT);
     }
 
     @Given("the {string} stay in page")
-    public void queDanielSeEncuentraEnLaPaginaDeAvianca(String actor) throws InterruptedException {
+    public void queDanielSeEncuentraEnLaPaginaDeAvianca(String actor) {
         theActor(actor).attemptsTo(Open.browserOn(new GoogleHomePage()));
     }
 }

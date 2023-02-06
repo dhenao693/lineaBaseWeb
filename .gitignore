@@ -35,3 +35,4 @@ target/
 gradlew
 gradlew.bat
 *.apk
+AssertFile.txt
