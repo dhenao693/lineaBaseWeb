@@ -22,7 +22,7 @@ import static userinterface.HomePage.LBL_TITLE_PAGE;
 public class BlogStepdefinition {
 
 
-    @When("^find the blog (.*)$")
+    @When("find the blog {string}")
     public void findTheBlog(String blogName) {
         theActorInTheSpotlight().attemptsTo(FindBlog.inPage(blogName));
     }
@@ -38,7 +38,7 @@ public class BlogStepdefinition {
         theActorInTheSpotlight().should(seeThat(SeeText.on(LBL_TITLE_PAGE), equalTo(data.get(0).get("blogName"))));
     }
 
-    @Then("^the user see the message (.*)$")
+    @Then("the user see the message {string}")
     public void theUserSeeTheConfirmMessage(String message) {
         theActorInTheSpotlight().should(seeThat(SeeText.on(LBL_SUSCRIBE_CONFIRM), equalTo(message)));
     }
