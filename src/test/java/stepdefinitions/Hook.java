@@ -4,7 +4,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import userinterface.HomePage;
+import userinterface.GoogleHomePage;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActor;
@@ -20,6 +20,6 @@ public class Hook {
 
     @Given("the {string} stay in page")
     public void queDanielSeEncuentraEnLaPaginaDeAvianca(String actor) throws InterruptedException {
-        theActor(actor).attemptsTo(Open.browserOn(new HomePage()));
+        theActor(actor).attemptsTo(Open.browserOn(new GoogleHomePage()));
     }
 }

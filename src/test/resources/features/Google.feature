@@ -2,8 +2,8 @@ Feature:  As a customer wish rent a car
 
   Scenario Outline: Find the blog
     Given the "user" stay in page
-    When  find the blog "<blogName>"
-    Then see the blog page
+    When  find the page "<blogName>"
+    Then see the page
       | blogName   | url   |
       | <blogName> | <url> |
 
