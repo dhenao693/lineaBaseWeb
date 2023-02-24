@@ -24,7 +24,7 @@ public class GoogleStepDefinition {
     @Then("^see the page$")
     public void seeTheBlogPage(List<Map<String, String>> data) {
         theActorInTheSpotlight().should(seeThat(SeeUrl.onPage(), equalTo(data.get(0).get("url"))));
-        theActorInTheSpotlight().should(seeThat(SeeElement.of(data.get(0).get("blogName"))));
+        theActorInTheSpotlight().should(seeThat(SeeElement.of(data.get(0).get("pageInfo"))));
     }
 
     @Then("the user see the message {string}")

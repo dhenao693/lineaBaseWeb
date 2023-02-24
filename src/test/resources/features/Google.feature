@@ -4,15 +4,15 @@ Feature:  As a customer wish rent a car
     Given the "user" stay in page
     When  find the page "<blogName>"
     Then see the page
-      | blogName   | url   |
-      | <blogName> | <url> |
+      | pageInfo   | url   |
+      | <pageInfo> | <url> |
 
     Examples:
-      | blogName | url                         |
-      | Facebook | https://es-la.facebook.com/ |
+      | blogName | url                         | pageInfo                     |
+      | Facebook | https://es-la.facebook.com/ | Enlaces a sitios de Facebook |
 
   Scenario: Find the page
     Given the "user" stay in page
     When  find the page "Facebook"
-    Then the user see the message "¿Qué estás pensando, Daniel?"
+    Then the user see the message "Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida."
 
